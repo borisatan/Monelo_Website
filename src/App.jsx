@@ -108,7 +108,7 @@ function App() {
                   </svg>
                   <div>
                     <h3>Welcome to the founding 200!</h3>
-                    <p>You're on the list. Check your email for next steps.</p>
+                    <p>We will email you before launching.</p>
                   </div>
                 </div>
               </div>
@@ -244,7 +244,7 @@ function App() {
                     </svg>
                     <div>
                       <h3>Welcome to the founding 200!</h3>
-                      <p>You're on the list. Check your email for next steps.</p>
+                      <p>We will email you before launching.</p>
                     </div>
                   </div>
                 </div>
