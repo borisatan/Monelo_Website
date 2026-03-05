@@ -5,8 +5,6 @@ function App() {
   const [email, setEmail] = useState('')
   const [globalSubmitted, setGlobalSubmitted] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const [referralCode, setReferralCode] = useState(null)
-  const [copied, setCopied] = useState(false)
 
   const { signup, loading, error, success, reset } = useWaitlistSignup()
 
@@ -38,37 +36,7 @@ function App() {
 
     if (result.success) {
       setGlobalSubmitted(true)
-      setReferralCode(result.referralCode)
       setEmail('')
-    }
-  }
-
-  const copyToClipboard = async (text) => {
-    try {
-      if (navigator.clipboard) {
-        await navigator.clipboard.writeText(text)
-        setCopied(true)
-        setTimeout(() => setCopied(false), 2000)
-        return
-      }
-
-      // Fallback for older browsers
-      const textArea = document.createElement('textarea')
-      textArea.value = text
-      textArea.style.position = 'fixed'
-      textArea.style.opacity = '0'
-      document.body.appendChild(textArea)
-      textArea.select()
-
-      try {
-        document.execCommand('copy')
-        setCopied(true)
-        setTimeout(() => setCopied(false), 2000)
-      } finally {
-        document.body.removeChild(textArea)
-      }
-    } catch (err) {
-      console.error('Failed to copy:', err)
     }
   }
 
@@ -142,26 +110,6 @@ function App() {
                     <h3>Welcome to the founding 200!</h3>
                     <p>You're on the list. Check your email for next steps.</p>
                   </div>
-                </div>
-
-                <div className="viral-share">
-                  <p className="share-label">Want to move up in line?</p>
-                  <p className="share-text">Share your unique link with friends:</p>
-                  <div className="referral-link-box">
-                    <input
-                      type="text"
-                      value={`https://monelo.com/join?ref=${referralCode}`}
-                      readOnly
-                      onClick={(e) => e.target.select()}
-                    />
-                    <button
-                      className="copy-btn"
-                      onClick={() => copyToClipboard(`https://monelo.com/join?ref=${referralCode}`)}
-                    >
-                      {copied ? 'Copied!' : 'Copy Link'}
-                    </button>
-                  </div>
-                  <p className="share-benefit">Share with friends to skip the line! 🚀</p>
                 </div>
               </div>
             )}
@@ -298,26 +246,6 @@ function App() {
                       <h3>Welcome to the founding 200!</h3>
                       <p>You're on the list. Check your email for next steps.</p>
                     </div>
-                  </div>
-
-                  <div className="viral-share" style={{ marginTop: '2rem' }}>
-                    <p className="share-label">Want to move up in line?</p>
-                    <p className="share-text">Share your unique link with friends:</p>
-                    <div className="referral-link-box">
-                      <input
-                        type="text"
-                        value={`https://monelo.com/join?ref=${referralCode}`}
-                        readOnly
-                        onClick={(e) => e.target.select()}
-                      />
-                      <button
-                        className="copy-btn"
-                        onClick={() => copyToClipboard(`https://monelo.com/join?ref=${referralCode}`)}
-                      >
-                        {copied ? 'Copied!' : 'Copy Link'}
-                      </button>
-                    </div>
-                    <p className="share-benefit">Share with friends to skip the line! 🚀</p>
                   </div>
                 </div>
               )}

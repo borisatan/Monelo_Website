@@ -11,15 +11,10 @@ export const useWaitlistSignup = () => {
     setError(null)
 
     try {
-      // Generate unique referral code (first 8 chars of base64 email + 4 random chars)
-      const referralCode = btoa(email).slice(0, 8).replace(/[^a-zA-Z0-9]/g, '') +
-                          Math.random().toString(36).slice(2, 6).toUpperCase()
-
       const { data, error: supabaseError } = await supabase
         .from('waitlist_signups')
         .insert([{
-          email,
-          referral_code: referralCode
+          email
         }])
         .select()
 
@@ -32,7 +27,7 @@ export const useWaitlistSignup = () => {
       }
 
       setSuccess(true)
-      return { success: true, referralCode: data[0].referral_code }
+      return { success: true }
     } catch (err) {
       const errorMessage = err.message || 'Something went wrong. Please try again.'
       setError(errorMessage)
