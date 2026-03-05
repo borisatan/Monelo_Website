@@ -193,19 +193,23 @@ function App() {
         </div>
       </section>
 
-      {/* The Peek */}
+      {/* The Peek
       <section className="peek">
         <div className="container">
           <h2>See it in action</h2>
           <div className="peek-visual">
-            <img
-              src="/assets/AddTrans1.jpg"
-              alt="Monelo app interface"
+            <video
+              src="/assets/monelo.mp4"
               className="app-screenshot"
+              controls
+              autoPlay
+              muted
+              loop
+              playsInline
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* The Incentive */}
       <section className="incentive">
