@@ -67,7 +67,7 @@ function App() {
             </h1>
 
             <p className="hero-subtitle animate-fade-in-up delay-3">
-              Monelo turns mindless spending into mindful saving. Join the waitlist today—the first 200 members get Monelo free for life.
+              Monelo turns mindless spending into mindful saving. Join the waitlist today - the first 100 members get Monelo <span style={{color: 'var(--accent-teal)'}}>free for life. </span>
             </p>
 
             {!globalSubmitted ? (
@@ -107,7 +107,7 @@ function App() {
                     <polyline points="22 4 12 14.01 9 11.01" />
                   </svg>
                   <div>
-                    <h3>Welcome to the founding 200!</h3>
+                    <h3>Welcome to the founding 100!</h3>
                     <p>We will email you before launching.</p>
                   </div>
                 </div>
@@ -159,41 +159,6 @@ function App() {
         </div>
       </section> */}
 
-      {/* The Incentive */}
-      <section className="incentive">
-        <div className="container">
-          <div className="incentive-box">
-            <h2>Why join the founding 200?</h2>
-            <ul className="benefits-list">
-              <li>
-                <span className="benefit-icon">🎁</span>
-                <div>
-                  <strong>Free for life</strong>
-                  <p>Never pay a subscription fee. Ever.</p>
-                </div>
-              </li>
-              <li>
-                <span className="benefit-icon">🗣️</span>
-                <div>
-                  <strong>Shape the product</strong>
-                  <p>Your feedback directly influences features.</p>
-                </div>
-              </li>
-              <li>
-                <span className="benefit-icon">👥</span>
-                <div>
-                  <strong>Founding member badge</strong>
-                  <p>Exclusive recognition in the app.</p>
-                </div>
-              </li>
-            </ul>
-            <p className="incentive-why">
-              Why? We want 200 power users to help shape the future of Monelo.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="cta" id="waitlist">
         <div className="container">
@@ -205,7 +170,7 @@ function App() {
               </div>
               <h2>Claim your founding member spot</h2>
               <p className="cta-subtitle">
-                Be first in line when we launch. The first 200 members get Monelo free for life.
+                Be first in line when we launch. The first 100 members get Monelo free for life.
               </p>
 
               {!globalSubmitted ? (
@@ -243,7 +208,7 @@ function App() {
                       <polyline points="22 4 12 14.01 9 11.01" />
                     </svg>
                     <div>
-                      <h3>Welcome to the founding 200!</h3>
+                      <h3>Welcome to the founding 100!</h3>
                       <p>We will email you before launching.</p>
                     </div>
                   </div>
