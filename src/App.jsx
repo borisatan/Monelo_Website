@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useWaitlistSignup } from './hooks/useSupabase'
 
 function App() {
@@ -228,6 +229,8 @@ function App() {
           </div>
           <p className="footer-text">
             © {new Date().getFullYear()} Monelo. All rights reserved.
+            {' · '}
+            <Link to="/support" className="footer-support-link">Support</Link>
           </p>
         </div>
       </footer>

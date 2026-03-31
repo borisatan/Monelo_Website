@@ -810,6 +810,15 @@ h1, h2, h3, h4 {
   font-size: 1rem;
 }
 
+.footer-support-link {
+  color: var(--text-muted);
+  transition: color 0.2s ease;
+}
+
+.footer-support-link:hover {
+  color: var(--text-secondary);
+}
+
 /* ============================================
    RESPONSIVE
    ============================================ */
@@ -880,5 +889,205 @@ h1, h2, h3, h4 {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+  }
+}
+
+/* ============================================
+   SUPPORT PAGE
+   ============================================ */
+.support-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  padding: calc(var(--section-padding) + 5rem) 0 var(--section-padding);
+}
+
+.support-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.support-header h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.75rem;
+}
+
+.support-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.support-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 680px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.support-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.support-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.support-form-row .support-field {
+  margin-bottom: 0;
+}
+
+.support-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.support-char-count {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.support-input,
+.support-textarea {
+  padding: 0.9rem 1.1rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.support-input:focus,
+.support-textarea:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px var(--accent-blue-glow);
+}
+
+.support-input::placeholder,
+.support-textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.support-input-error {
+  border-color: var(--accent-red) !important;
+}
+
+.support-input-error:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2) !important;
+}
+
+.support-textarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.6;
+}
+
+.support-field-error {
+  font-size: 0.82rem;
+  color: var(--accent-red);
+}
+
+.support-submit {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: var(--accent-blue);
+  color: var(--text-primary);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 0.5rem;
+}
+
+.support-submit:hover:not(:disabled) {
+  background: var(--accent-blue-hover);
+}
+
+.support-submit:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.support-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Success state */
+.support-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0;
+  gap: 1rem;
+}
+
+.support-success-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(42, 157, 143, 0.15);
+  border: 1px solid rgba(42, 157, 143, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-teal);
+}
+
+.support-success h2 {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+}
+
+.support-success p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.support-back-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--accent-blue);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.support-back-link:hover {
+  color: var(--accent-blue-hover);
+}
+
+@media (max-width: 640px) {
+  .support-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .support-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
   }
 }
