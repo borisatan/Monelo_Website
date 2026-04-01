@@ -53,8 +53,8 @@ serve(async (req) => {
 
     // --- Supabase client (service role for rate limit checks) ---
     const supabase = createClient(
-      Deno.env.get('SUPABASE_URL')!,
-      Deno.env.get('SUPABASE_SECRET_KEY')!,
+      Deno.env.get('VITE_PUBLIC_SUPABASE_URL')!,
+      Deno.env.get('VITE_SUPABASE_ANON_KEY')!,
     )
 
     // --- IP rate limiting ---
