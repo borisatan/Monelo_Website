@@ -231,6 +231,10 @@ function App() {
             © {new Date().getFullYear()} Monelo. All rights reserved.
             {' · '}
             <Link to="/support" className="footer-support-link">Support</Link>
+            {' · '}
+            <Link to="/privacy-policy" className="footer-support-link">Privacy Policy</Link>
+            {' · '}
+            <Link to="/terms-and-conditions" className="footer-support-link">Terms & Conditions</Link>
           </p>
         </div>
       </footer>
