@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useSupportForm } from '../hooks/useSupportForm'
+import AppStoreBadge from '../components/AppStoreBadge'
 
 function BugReportPage() {
   const [scrolled, setScrolled] = useState(false)
@@ -61,10 +62,12 @@ function BugReportPage() {
       <header className={`header ${scrolled ? 'scrolled' : ''}`}>
         <div className="container header-inner">
           <Link to="/" className="logo">
-            <img src="/assets/Logo.png" alt="Monelo" className="logo-image" />
-            Monelo
+            <img src={`${import.meta.env.BASE_URL}assets/Logo.png`} alt="Monora" className="logo-image" />
+            Monora
           </Link>
-          <Link to="/#waitlist" className="header-cta">Join Waitlist</Link>
+          <a href="#" className="header-appstore-btn" target="_blank" rel="noopener noreferrer">
+            <AppStoreBadge size="small" />
+          </a>
         </div>
       </header>
 
@@ -160,11 +163,11 @@ function BugReportPage() {
       <footer className="footer">
         <div className="container footer-inner">
           <div className="footer-logo">
-            <img src="/assets/Logo.png" alt="Monelo" className="footer-logo-image" />
-            Monelo
+            <img src={`${import.meta.env.BASE_URL}assets/Logo.png`} alt="Monora" className="footer-logo-image" />
+            Monora
           </div>
           <p className="footer-text">
-            © {new Date().getFullYear()} Monelo. All rights reserved.
+            © {new Date().getFullYear()} Monora. All rights reserved.
             {' · '}
             <Link to="/support" className="footer-support-link">Support</Link>
             {' · '}

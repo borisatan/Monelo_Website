@@ -1,6 +1,6 @@
 **Terms & Conditions**  
 
-These terms and conditions apply to the Monelo app (hereby referred to as "Application") for mobile devices that was created by Boris Atanassov (hereby referred to as "Service Provider") as a Commercial service.
+These terms and conditions apply to the Monora app (hereby referred to as "Application") for mobile devices that was created by Boris Atanassov (hereby referred to as "Service Provider") as a Commercial service.
 
 Upon downloading or utilizing the Application, you are automatically agreeing to the following terms. It is strongly advised that you thoroughly read and understand these terms prior to using the Application.
 
