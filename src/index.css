@@ -1318,6 +1318,18 @@ h1, h2, h3, h4 {
   flex-shrink: 0;
 }
 
+/* ── Hero screenshot (frameless) ────────────────────────────── */
+.hero-screenshot {
+  width: 320px;
+  height: auto;
+  border-radius: 28px;
+  display: block;
+  box-shadow:
+    0 60px 120px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+  animation: float 6s ease-in-out infinite;
+}
+
 /* ── Shared section helpers ──────────────────────────────────── */
 .section-label {
   font-size: 0.75rem;
@@ -1441,7 +1453,7 @@ h1, h2, h3, h4 {
 
 .step-text p {
   font-size: 1.05rem;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.72);
   line-height: 1.7;
   max-width: 380px;
   margin: 0;
@@ -1620,6 +1632,10 @@ h1, h2, h3, h4 {
     width: 180px;
   }
 
+  .hero-screenshot {
+    width: 240px;
+  }
+
   .step-card,
   .step-card--reverse {
     grid-template-columns: 1fr;
@@ -1655,6 +1671,10 @@ h1, h2, h3, h4 {
 @media (max-width: 640px) {
   .phone-frame {
     width: 160px;
+  }
+
+  .hero-screenshot {
+    width: 200px;
   }
 
   .trust-item {

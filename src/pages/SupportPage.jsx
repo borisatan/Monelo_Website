@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useSupportForm } from '../hooks/useSupportForm'
-import AppStoreBadge from '../components/AppStoreBadge'
+import AppStoreBadge, { APP_STORE_URL } from '../components/AppStoreBadge'
 
 function SupportPage() {
   const [scrolled, setScrolled] = useState(false)
@@ -65,8 +65,8 @@ function SupportPage() {
             <img src={`${import.meta.env.BASE_URL}assets/Logo.png`} alt="Monora" className="logo-image" />
             Monora
           </Link>
-          <a href="#" className="header-appstore-btn" target="_blank" rel="noopener noreferrer">
-            <AppStoreBadge size="small" />
+          <a href={APP_STORE_URL} className="header-appstore-btn" target="_blank" rel="noopener noreferrer">
+            <AppStoreBadge size="large" />
           </a>
         </div>
       </header>
